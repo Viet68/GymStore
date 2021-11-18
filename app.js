@@ -13,8 +13,7 @@ const productRouter = require('./routes/products');
 const productDetailRouter = require('./routes/productDetail');
 const whyUsRouter = require('./routes/whyUs');
 const testimonialRouter = require('./routes/testimonial');
-const helmet = require('helmet');
-const compression = require('compression');
+
 
 const app = express();
 
@@ -22,8 +21,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-app.use(helmet());
-app.use(compression());
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
